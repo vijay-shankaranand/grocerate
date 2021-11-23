@@ -1,7 +1,7 @@
 # GROCERATE
 #### Video Demo: https://youtu.be/Fcqh5X4IuRk
 #### Description:
- My project's name is Grocerate.It is a web application created with Python on the backend with Flask framework and HTML and CSS on the frontend with Bootstrap library. SQL is used to interact with the database.
+ My project's name is Grocerate.It is a web application created with Python on the backend with Flask framework and HTML and CSS on the frontend with Bootstrap library. SQL is used to interact with the database. CS50 IDE is used to build this application.
  The idea of this website is for people who are stuck in home quarantine to utilise this platform to post their daily supply needs as they
  are unable to go out and buy supplies on their own. Delivery agents around their vicinity can purchase the items and leave it at their doorstep
  upon confirming the items with their customer. Payment can then be done through digital payment transactions.
