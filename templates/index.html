@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+        <main class="container p-6">
+        <table class="table table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Time Posted</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pickup in pickups %}
+                <tr>
+                    <td>{{pickup.food}}</td>
+                    <td>{{pickup.address}}</td>
+                    <td>{{pickup.time}}</td>
+                    <td>
+                        <form action="/info" method="post">
+                            <button class="btn btn-info" type="submit" value="{{pickup.time}}" name="times">More Info</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

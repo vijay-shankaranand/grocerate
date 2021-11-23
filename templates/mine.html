@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Posts
+{% endblock %}
+
+{% block main %}
+        <main class="container p-6">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Location</th>
+                <th>Time Posted</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pickup in pickups %}
+                <tr>
+                    <td>{{pickup.food}}</td>
+                    <td>{{pickup.address}}</td>
+                    <td>{{pickup.time}}</td>
+                    <td>{{pickup.remarks}}</td>
+                    <td>
+                        <form action="/delete" method="post">
+                            <button class="btn btn-danger" type="submit" value="{{pickup.food}}" name="foods">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/add" class="btn btn-success" >+ Post</a>
+{% endblock %}

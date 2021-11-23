@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+     <h1>Welcome to Grocerate!</h1>
+     <h4>Stuck at home for quarantine? Need supplies?</h4>
+     <p>Post on Grocerate -> connect with a delivery agent -> have your needs delivered right to your doorstep!</p><br>
+    <form action="/login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button><br><br>
+
+    </form>
+    <a href="/register">Don't have an account? Register now</a>
+{% endblock %}
